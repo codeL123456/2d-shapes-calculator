@@ -1,0 +1,24 @@
+{
+  "name": "2d-shapes-calculator",
+  "version": "4.0.0",
+  "description": "Calculate any regular shape",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack" : "build --dir"
+  },
+  "build": {
+    "appId": "com.2d.shapes.calculator",
+    "productName": "2d shapes calculator"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youssef-js/2d-shapes-calculator.git"
+  },
+  "author": "Youssef alaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youssef-js/2d-shapes-calculator/issues"
+  },
+  "homepage": "https://github.com/youssef-js/2d-shapes-calculator#readme"
+}
