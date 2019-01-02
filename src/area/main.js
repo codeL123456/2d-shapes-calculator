@@ -15,5 +15,6 @@ window.onload = function () {
 
         //displaying the values
         return $("#res").html(result);
-    })
+    });
+    
 }
