@@ -9,20 +9,26 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <title>Area</title>
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+    <title>Area calculator</title>
 </head>
 <body>
     <h1>Area calculator</h1>
+    <!--navigation-->
     <nav class="description container">
-        <li><a href="#"></a></li>
+        <li><a href="#square">Square</a></li>
     </nav>
-    <div class="container description">
+    <div class="container description" id="square">
         <h2>square</h2>
+        <!--Introduction-->
         <p class="lead">Square is a 2 diminsional shape that have 4 equal sides</p>
+        <!--an image for the square-->
         <img src="img/square.png" alt="square">
         <p>this is a square.</p>
         <hr>
         
+        <!--the formula for the area-->
         <h4>Formula</h4>
         <p class="lead">
             <span class="res">Area of a square </span>
@@ -30,11 +36,17 @@
         </p>
         <hr>
 
+        <!--displating the result of your calculation-->
         <h5>The result of your calculation: </h5>
         <p class="lead">
             <span id="res"></span>
             <span id="form"></span>
         </p>
+
+        <!--getting the values-->
+        <input type="number" name="side" id="sq-side">
+        <!--Click to calculate-->
+        <button class="btn btn-outline-primary" id="calSquare">Calculate the area</button>
     </div>
 </body>
 </html>
