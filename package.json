@@ -23,5 +23,8 @@
   "homepage": "https://github.com/youssef-js/2d-shapes-calculator#readme",
   "devDependencies": {
     "electron": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.2.1"
   }
 }
