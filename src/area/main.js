@@ -49,8 +49,8 @@ window.onload = function () {
         return $("#res").html(result);
     });
     $("#calRect").click(function () {
-        var x = $("#rec-length");      
-        var y = $("#rec-width");
+        var x = $("#rec-length").val();      
+        var y = $("#rec-width").val();
         
         var result = x * y;
 
