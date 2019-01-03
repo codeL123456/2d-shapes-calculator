@@ -12,9 +12,12 @@ window.onload = function () {
         //sitting the css
         $("#res").css("background-color", "yellow");
         $("#form").css("background-color", "lightgreen");
+        if (x === "") {
+            alert("please provide a number");
+        }
 
         //displaying the values
         return $("#res").html(result);
     });
-    
+
 }
