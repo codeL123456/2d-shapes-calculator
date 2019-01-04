@@ -1,10 +1,6 @@
 window.onload = function () {
-    function calculate(x, y, z, formula, result, sign1, sign2) {
-        z = z || "";
-        sign2 = sign2 || "";
-    }
-    function resultEditorD(x, y, formulaArea, resultArea) {
-        if (x === "" && y === "") {
+function resultEditorD(x, y, formulaArea, resultArea) {
+    if (x === "" && y === "") {
             alert("please provide a number!");
             document.getElementById(formulaArea). innerHTML = "";
         } else if (x === "" && y !== "") {
@@ -48,6 +44,7 @@ window.onload = function () {
         if (x === "") {
             alert("please provide a number");
         }
+        $("#form").html(x + "<sup>2</sup>" + " = ");
 
         //displaying the values
         return $("#res").html(result);
@@ -71,13 +68,25 @@ window.onload = function () {
         return $("#res1").html(result);
     });
     $("#calTri").click(function () {
-       var base = $("#tri-base").val();
-       var hight = $("#tri-height").val();
+       var x = $("#tri-base").val();
+       var y = $("#tri-height").val();
 
-       var result = base * height / 2;
+       var result = x * y / 2;
 
        $("#tri-base").val("");
        $("#tri-height").val("");
+       if (x === "" && y === "") {
+        alert("please provide a number!");
+        document.getElementById("form2"). innerHTML = "";
+        } else if (x === "" && y !== "") {
+            document.getElementById("form2"). innerHTML = "0 x " + y + " / 2 = ";
+        } else if (x !== "" && y === "") {
+            document.getElementById("form2"). innerHTML = x + " x 0" + " / 2 =";
+        } else {
+            document.getElementById("form2").innerHTML = x + " x " + y + " / 2 = ";
+        }
+        document.getElementById("form2").style.backgroundColor = "lightgreen";
+        document.getElementById("res2").style.backgroundColor = "yellow";
 
        return $("#res2").html(result);
     });
