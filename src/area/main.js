@@ -49,16 +49,21 @@ window.onload = function () {
         return $("#res").html(result);
     });
     $("#calRect").click(function () {
+        //assiging the values to variables
         var x = $("#rec-length").val();      
         var y = $("#rec-width").val();
         
+        //assigning the results to a variable
         var result = x * y;
 
+        //resitting the values
         $("#rec-length").val("");
         $("#rec-width").val("");
 
+        //sitting the css
         resultEditorM(x, y, "form1", "res1");
 
+        //displaying the result
         return $("#res1").html(result);
     });
 }
