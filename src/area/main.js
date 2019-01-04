@@ -1,4 +1,8 @@
 window.onload = function () {
+    function calculate(x, y, z, formula, result, sign1, sign2) {
+        z = z || "";
+        sign2 = sign2 || "";
+    }
     function resultEditorD(x, y, formulaArea, resultArea) {
         if (x === "" && y === "") {
             alert("please provide a number!");
@@ -66,4 +70,16 @@ window.onload = function () {
         //displaying the result
         return $("#res1").html(result);
     });
+    $("#calTri").click(function () {
+       var base = $("#tri-base").val();
+       var hight = $("#tri-height").val();
+
+       var result = base * height / 2;
+
+       $("#tri-base").val("");
+       $("#tri-height").val("");
+
+       return $("#res2").html(result);
+    });
+
 }
