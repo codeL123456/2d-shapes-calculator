@@ -1,33 +1,51 @@
-window.onload = function () {
-function resultEditorD(x, y, formulaArea, resultArea) {
-    if (x === "" && y === "") {
-            alert("please provide a number!");
-            document.getElementById(formulaArea). innerHTML = "";
-        } else if (x === "" && y !== "") {
-            document.getElementById(formulaArea). innerHTML = "0 / " + y + " =";
-        } else if (x !== "" && y === "") {
-            document.getElementById(formulaArea). innerHTML = x + " / 0" + " =";
-        } else {
-            document.getElementById(formulaArea).innerHTML = x + " / " + y + " = ";
-        }
-        document.getElementById(formulaArea).style.backgroundColor = "lightgreen";
-        document.getElementById(resultArea).style.backgroundColor = "yellow";
-    }
-    function resultEditorM(x, y, formula, resultArea) {
-        if (x === "" && y === "") {
-            alert("please provide a number!");
-            document.getElementById(formula). innerHTML = "";
-        } else if (x === "" && y !== "") {
-            document.getElementById(formula). innerHTML = "0 x " + y + " =";
-        } else if (x !== "" && y === "") {
-            document.getElementById(formula). innerHTML = x + " x 0" + " =";
-        } else {
-            document.getElementById(formula).innerHTML = x + " x " + y + " = ";
-        }
-        document.getElementById(formula).style.backgroundColor = "lightgreen";
-        document.getElementById(resultArea).style.backgroundColor = "yellow";
+window.onload = function () { 
+    var calculator = {
+        multiply : function (x, y, result, formula) {
+            var id  = document.getElementById(x).value;
+            var id1 = document.getElementById(y).value;
+            var res = id * id1;
 
-    }  
+            document.getElementById(x).value = ""
+            document.getElementById(y).value = ""
+            if (x === "" && y === "") {
+                alert("please provide a number!");
+                document.getElementById(formula). innerHTML = "";
+            } else if (x === "" && y !== "") {
+                document.getElementById(formula). innerHTML = "0 x " + id1 + " =";
+            } else if (x !== "" && y === "") {
+                document.getElementById(formula). innerHTML = id + " x 0" + " =";
+            } else {
+                document.getElementById(formula).innerHTML = id + " x " + id1 + " = ";
+            }
+
+            document.getElementById(formula).style.backgroundColor = "lightgreen";
+            document.getElementById(result).style.backgroundColor = "yellow";
+            return document.getElementById(result).innerHTML = res;
+        }, 
+        multiplyAndDivide: function (x, y, formula, result) {
+            var id  = document.getElementById(x).value;
+            var id1 = document.getElementById(y).value;
+            var res = id * id1 / 2;
+
+            document.getElementById(x).value = ""
+            document.getElementById(y).value = ""
+            if (x === "" && y === "") {
+                alert("please provide a number!");
+                document.getElementById(formula). innerHTML = "";
+            } else if (x === "" && y !== "") {
+                document.getElementById(formula). innerHTML = "0 x " + id1 + " /2 =";
+            } else if (x !== "" && y === "") {
+                document.getElementById(formula). innerHTML = id + " x 0" + " /2 =";
+            } else {
+                document.getElementById(formula).innerHTML = id + " x " + id1 + " /2 = ";
+            }
+
+            document.getElementById(formula).style.backgroundColor = "lightgreen";
+            document.getElementById(result).style.backgroundColor = "yellow";
+            return document.getElementById(result).innerHTML = res;
+        },
+        
+    };
     $("#calSquare").click(function () {
         //assigning the value(s) to (a) variable(s)
         var x = $("#sq-side").val();
@@ -49,46 +67,25 @@ function resultEditorD(x, y, formulaArea, resultArea) {
         //displaying the values
         return $("#res").html(result);
     });
-    $("#calRect").click(function () {
-        //assiging the values to variables
-        var x = $("#rec-length").val();      
-        var y = $("#rec-width").val();
-        
-        //assigning the results to a variable
-        var result = x * y;
-
-        //resitting the values
-        $("#rec-length").val("");
-        $("#rec-width").val("");
-
-        //sitting the css
-        resultEditorM(x, y, "form1", "res1");
-
-        //displaying the result
-        return $("#res1").html(result);
+    $("#calRect").click(function() {
+        calculator.multiply("rec-length", "rec-width", "res1", "form1")
     });
     $("#calTri").click(function () {
-       var x = $("#tri-base").val();
-       var y = $("#tri-height").val();
-
-       var result = x * y / 2;
-
-       $("#tri-base").val("");
-       $("#tri-height").val("");
-       if (x === "" && y === "") {
-        alert("please provide a number!");
-        document.getElementById("form2"). innerHTML = "";
-        } else if (x === "" && y !== "") {
-            document.getElementById("form2"). innerHTML = "0 x " + y + " / 2 = ";
-        } else if (x !== "" && y === "") {
-            document.getElementById("form2"). innerHTML = x + " x 0" + " / 2 =";
-        } else {
-            document.getElementById("form2").innerHTML = x + " x " + y + " / 2 = ";
-        }
-        document.getElementById("form2").style.backgroundColor = "lightgreen";
-        document.getElementById("res2").style.backgroundColor = "yellow";
-
-       return $("#res2").html(result);
+        calculator.multiplyAndDivide("tri-base", "tri-height", "form2", "res2");
     });
+    $("#calCir").click(function () {
+        var x = $("#rad").val();
+        var result = 3.14 * Math.pow(x, 2);
 
+        //sitting the css
+        $("#res3").css("background-color", "yellow");
+        $("#form3").css("background-color", "lightgreen");
+        if (x === "") {
+            alert("please provide a number");
+        }
+        $("#form3").html("&pi;" + x + "<sup>2</sup>" + " = ");
+
+        //displaying the values
+        return $("#res3").html(result);
+    })
 }
