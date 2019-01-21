@@ -91,4 +91,5 @@ window.onload = function () {
         //displaying the values
         return $("#res3").html(result);
     })
+    
 }
