@@ -90,6 +90,8 @@ window.onload = function () {
 
         //displaying the values
         return $("#res3").html(result);
+    });
+    $("#calPara").click(function () {
+        calculate.mulitply("para-base", "para-height", "res4", "form4");
     })
-    
 }
