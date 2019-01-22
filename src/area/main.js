@@ -90,6 +90,11 @@ window.onload = function () {
 
         //displaying the values
         return $("#res3").html(result);
-    })
-    
+    });
+    $("#calPara").click(function () {
+        calculate.mulitply("para-base", "para-height", "res4", "form4");
+    });
+    $("#calRom").click(function () {
+        calculate.multiplyAndDivide("rhom1", "rhom2", "res5", "form5")
+    });
 }

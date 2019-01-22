@@ -16,13 +16,18 @@
 <body>
     <h1>Area calculator</h1>
     <!--navigation-->
-    <nav class="description container">
-        <li><a href="#square">Square</a></li>
-    </nav>
+    <div class="sidenav">
+        <a href="#square">square</a>
+        <a href="#rect">rectangle</a>
+        <a href="#tri">triangle</a>
+        <a href="#circle">circle</a>
+        <a href="#para">paralellogram</a>
+        <a href="#rom">rombus</a>
+    </div>
     <div class="container description" id="square">
         <h2>square</h2>
         <!--Introduction-->
-        <p class="lead"><mark><b>Square</b></mark> is a 2 diminsional shape that has 4 right angles and 4 sides that are equal in length.</p>
+        <p class="lead"><mark><b>Square</b></mark> is a 2 diminsional shape that has 4 right angles and 4 sides that are equal in length and 4 right angles (90&deg;).</p>
         <!--an image for the square-->
         <img src="img/square.png" alt="square">
         <p>this is a square.</p>
@@ -46,18 +51,18 @@
         <!--getting the values-->
         <input type="number" name="side" id="sq-side" placeholder="side"><br>
         <!--Click to calculate-->
-        <button class="btn btn-outline-primary" id="calSquare">Calculate the area</button>
+        <button class="btn btn-outline-primary" id="calSquare">Calculate</button>
     </div>
     <div class="container description" id="rect">
         <h2>Rectangle</h2>
         <!--introduction-->
-        <p class="lead">A <mark><b>rectangle</b></mark> is a 2 dimintional shape that has 4 right angles and 4 sides. Each 2 paralel sides are equal.</p>
+        <p class="lead">A <mark><b>rectangle</b></mark> is a 2 dimintional shape that has 4 right angles and 4 sides. Each 2 paralel sides are equal in length and all its 4 angles are right angles (90&deg;)</p>
         <!--an image for the shape-->
         <img src="img/rectangle.jpg" alt="rectangle" width="200">
         <p>this is a rectangle</p>
         <hr>
 
-        <!--formulas-->
+        <!--formula -->
         <h4>formula</h4>
         <p class="lead">
             <span class="res">area of a rectangle </span>
@@ -77,12 +82,12 @@
         <input type="number" name="width" id="rec-width" placeholder="width"><br>
 
         <!--click to calculate-->
-        <button class="btn btn-outline-secondary" id="calRect">Calculate the area</button>
+        <button class="btn btn-outline-secondary" id="calRect">Calculate</button>
     </div>
     <div class="container description" id="tri">
         <h2>triangle</h2>
         <p class="lead">
-            A <mark><b>Triangle</b></mark> is a 2 diminsional shape that has 3 sides.
+            A <mark><b>Triangle</b></mark> is a 2 diminsional shape that has 3 sides and 3 angles. the three angles can be 1 right (90 &deg;) and 2 acute (&gt; 90 &deg;), 3 acute (&gt; 90 &deg;), 1 obtuse (&lt; 90 &deg;) and 2 acute(&gt; 90 &deg;).
         </p>
         <img src="img/triangle.png" alt="triangle" width="200">
         <p>this is a triangle</p>
@@ -104,7 +109,7 @@
         <input type="number" placeholder="base" id="tri-base"><br>
         <input type="number" placeholder="hight" id="tri-height"><br>
 
-        <button class="btn btn-outline-success" id="calTri">calculate the area</button>
+        <button class="btn btn-outline-success" id="calTri">calculate</button>
     </div>
     <div class="container description" id="circle">
         <h2>circle</h2>
@@ -122,21 +127,57 @@
         </p>
         <hr>
 
-        <h5>THe result of your calculation :</h5>
+        <h5>The result of your calculation :</h5>
         <p class="lead">
             <span id="form3"></span>
             <span id="res3"></span>
         </p>
 
         <input type="number" placeholder="radius" id="rad"><br>
-
-        <button class="btn btn-outline-secondary" id="calCir">Calculate the circle</button>
+ 
+        <button class="btn btn-outline-secondary" id="calCir">Calculate</button>
     </div>
     <div class="container description" id="para">
-        <p class="lead">A <mark>paralellogram</mark> is a 2 dimintional shpape that has two pairs of parallel sides. The opposite or facing sides of a parallelogram are of equal length </p>
-        <img src="img/paralellogram.png" alt="parallelogram">
+        <h2>paralellogram</h2>
+        <p class="lead">A <mark>paralellogram</mark> is a 2 dimintional shpape that has two pairs of parallel sides. The opposite or facing sides of a parallelogram are of equal length and the angles are not right angles (90&deg;)</p>
+        <img src="img/paralellogram.png" alt="parallelogram" width="200">
         <p>this is a paralellogram</p>
         <hr>
+        <h4>formula </h4>
+        <p class="lead">
+            <span class="res">Area of a paralellogram </span>
+            <span class="form">= base x height</span>
+        </p>
+        <hr>
+        <h5>the result of your calculcation: </h5>
+        <p class="lead">
+            <span id="form4"></span>
+            <span id="res4"></span>
+        </p>
+        <input type="number" placeholder="base" id="para-base"><br>
+        <input type="number" placeholder="height" id="para-height"><br>
+        <button class="btn btn-outline-success" id="calPara">Calculate</button>
+    </div>
+    <div class="container description" id="rom">
+        <h2>rombus</h2>
+        <p class="lead">A <mark>rhombus </mark>is a 2 dimintional shape that has 4 sides that are all equal to each other and the angels are not right angles(90&deg;)</p>
+        <img src="img/rhombus.png" alt="rhombus" width="200">
+        <p>this is a rhombus</p>
+        <hr>
+        <h4>formula</h4>
+        <p class="lead">
+            <span class="res">area of rombus </span>
+            <span class="form"> = (diognal 1 x diognal 2) / 2</span>
+        </p>
+        <hr>
+        <h5>the result of your calculation</h5>
+        <p class="lead">
+            <span id="form5"></span>
+            <span id="res5"></span>
+        </p>
+        <input type="number" placeholder="Diognal 1" id="rhom1"><br>
+        <input type="number" placeholder="Diognal 2" id="rhom2"><br>
+        <button class="btn btn-outline-primary" id="calRom">calculate</button>
     </div>
 </body>
 </html>
