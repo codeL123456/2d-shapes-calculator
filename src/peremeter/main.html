@@ -11,9 +11,176 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="jquery.js"></script>
     <script src="main.js"></script>
-    <title>Premeter calculator</title>
+    <title>Area calculator</title>
 </head>
 <body>
-    
+    <h1>Area calculator</h1>
+    <!--navigation-->
+    <div class="description container">
+        <h2>Table of contents</h2>
+        <ul>
+        <li><a href="#square">square</a><br></li>
+        <li><a href="#rect">rectangle</a><br></li>
+        <li><a href="#tri">triangle</a><br></li>
+        <li><a href="#circle">circle</a><br></li>
+        <li><a href="#para">paralellogram</a><br></li>
+        <li><a href="#rom">rombus</a><br></li>
+    </ul>
+    </div>
+    <div class="container description" id="square">
+        <h2>square</h2>
+        <!--Introduction-->
+        <p class="lead"><mark><b>Square</b></mark> is a 2 diminsional shape that has 4 right angles and 4 sides that are equal in length and 4 right angles (90&deg;).</p>
+        <!--an image for the square-->
+        <img src="img/square.png" alt="square">
+        <p>this is a square.</p>
+        <hr>
+        
+        <!--the formula for the area-->
+        <h4>Formula</h4>
+        <p class="lead">
+            <span class="res">Area of a square </span>
+            <span class="form">= Side <sup>2</sup></span>
+        </p>
+        <hr>
+
+        <!--displating the result of your calculation-->
+        <h5>The result of your calculation: </h5>
+        <p class="lead">
+            <span id="form"></span>
+            <span id="res"></span>
+        </p>
+
+        <!--getting the values-->
+        <input type="number" name="side" id="sq-side" placeholder="side"><br>
+        <!--Click to calculate-->
+        <button class="btn btn-outline-primary" id="calSquare">Calculate</button>
+    </div>
+    <div class="container description" id="rect">
+        <h2>Rectangle</h2>
+        <!--introduction-->
+        <p class="lead">A <mark><b>rectangle</b></mark> is a 2 dimintional shape that has 4 right angles and 4 sides. Each 2 paralel sides are equal in length and all its 4 angles are right angles (90&deg;)</p>
+        <!--an image for the shape-->
+        <img src="img/rectangle.jpg" alt="rectangle" width="200">
+        <p>this is a rectangle</p>
+        <hr>
+
+        <!--formula -->
+        <h4>formula</h4>
+        <p class="lead">
+            <span class="res">area of a rectangle </span>
+            <span class="form">= length x width</span>
+        </p>
+        <hr>
+
+        <!--displaying the results-->
+        <h5>the result of your calculation: </h5>
+        <p class="lead">
+            <span id="form1"></span>
+            <span id="res1"></span>
+        </p>
+        
+        <!--gitting the values-->
+        <input type="number" name="length" id="rec-length" placeholder="length"><br>
+        <input type="number" name="width" id="rec-width" placeholder="width"><br>
+
+        <!--click to calculate-->
+        <button class="btn btn-outline-secondary" id="calRect">Calculate</button>
+    </div>
+    <div class="container description" id="tri">
+        <h2>triangle</h2>
+        <p class="lead">
+            A <mark><b>Triangle</b></mark> is a 2 diminsional shape that has 3 sides and 3 angles. the three angles can be 1 right (90 &deg;) and 2 acute (&gt; 90 &deg;), 3 acute (&gt; 90 &deg;), 1 obtuse (&lt; 90 &deg;) and 2 acute(&gt; 90 &deg;).
+        </p>
+        <img src="img/triangle.png" alt="triangle" width="200">
+        <p>this is a triangle</p>
+        <hr>
+
+        <h4>formula</h4>
+        <p class="lead">
+            <span class="res">area of a triangle </span>
+            <span class="form">= base x hight / 2</span>
+        </p>
+        <hr>
+        
+        <h5>the result of your calculation</h5>
+        <p class="lead">
+            <span id="form2"></span>
+            <span id="res2"></span>
+        </p>
+
+        <input type="number" placeholder="base" id="tri-base"><br>
+        <input type="number" placeholder="hight" id="tri-height"><br>
+
+        <button class="btn btn-outline-success" id="calTri">calculate</button>
+    </div>
+    <div class="container description" id="circle">
+        <h2>circle</h2>
+        <p class="lead">
+            A <mark><b>Circle</b></mark> is a round shape, which means that is has no sides or angles
+        </p>
+        <img src="img/circle.png" alt="cicle" width="200">
+        <p>this is a circle</p>
+        <hr>
+
+        <h4>Formula</h4>
+        <p class="lead">
+            <span class="res">Area of a circle </span>
+            <span class="form">= &pi; radius<sup>2</sup></span>
+        </p>
+        <hr>
+
+        <h5>The result of your calculation :</h5>
+        <p class="lead">
+            <span id="form3"></span>
+            <span id="res3"></span>
+        </p>
+
+        <input type="number" placeholder="radius" id="rad"><br>
+ 
+        <button class="btn btn-outline-secondary" id="calCir">Calculate</button>
+    </div>
+    <div class="container description" id="para">
+        <h2>paralellogram</h2>
+        <p class="lead">A <mark>paralellogram</mark> is a 2 dimintional shpape that has two pairs of parallel sides. The opposite or facing sides of a parallelogram are of equal length and the angles are not right angles (90&deg;)</p>
+        <img src="img/paralellogram.png" alt="parallelogram" width="200">
+        <p>this is a paralellogram</p>
+        <hr>
+        <h4>formula </h4>
+        <p class="lead">
+            <span class="res">Area of a paralellogram </span>
+            <span class="form">= base x height</span>
+        </p>
+        <hr>
+        <h5>the result of your calculcation: </h5>
+        <p class="lead">
+            <span id="form4"></span>
+            <span id="res4"></span>
+        </p>
+        <input type="number" placeholder="base" id="para-base"><br>
+        <input type="number" placeholder="height" id="para-height"><br>
+        <button class="btn btn-outline-success" id="calPara">Calculate</button>
+    </div>
+    <div class="container description" id="rom">
+        <h2>rombus</h2>
+        <p class="lead">A <mark>rhombus </mark>is a 2 dimintional shape that has 4 sides that are all equal to each other and the angels are not right angles(90&deg;)</p>
+        <img src="img/rhombus.png" alt="rhombus" width="200">
+        <p>this is a rhombus</p>
+        <hr>
+        <h4>formula</h4>
+        <p class="lead">
+            <span class="res">area of rombus </span>
+            <span class="form"> = (diognal 1 x diognal 2) / 2</span>
+        </p>
+        <hr>
+        <h5>the result of your calculation</h5>
+        <p class="lead">
+            <span id="form5"></span>
+            <span id="res5"></span>
+        </p>
+        <input type="number" placeholder="Diognal 1" id="rhom1"><br>
+        <input type="number" placeholder="Diognal 2" id="rhom2"><br>
+        <button class="btn btn-outline-primary" id="calRom">calculate</button>
+    </div>
 </body>
 </html>
