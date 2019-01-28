@@ -76,11 +76,24 @@ window.onload = function () {
                document.getElementById(equationArea).innerHTML = x + " + " + y + " + " + z + " + 0 =";
             } else if (x === "" && y === "" && z !== "" && i !== "") {
                 //if both x and y equal nothing 
-               document.getElementById(equationArea).innerHTML = "0 + " + y + " + 0 =";                
-            } else if (x === "" && y === "" && z !== "") {
-               document.getElementById(equationArea).innerHTML = "0 + 0 + " + z + " =";
+               document.getElementById(equationArea).innerHTML = "0 + 0 + " + z + " + " + i + " + =";                
+            } else if (x !== "" && y !== "" && z === "" && i === "") {
+                //if both z and i equaled nothing
+               document.getElementById(equationArea).innerHTML = x + " + " + y + " + 0 + 0 ="; 
+            } else if (x === "" && i === "" && y !== "" && z !== "") {
+                //both x and i equal nothing
+                document.getElementById(equationArea).innerHTML = "0 + " + y + " + " + " + " + z + " + 0 =";
+            } else if (x === "" && y !== "" && z === "" && i !== "") {
+                //both x and z equaled nothing
+                document.getElementById(equationArea).innerHTML = "0 + " + y + " + " + " + 0 + " + i + " =";                
+            } else if (x !== "" && y === "" && z === "" && i !== "") {
+                //if both y anad z equaled nothing
+                document.getElementById(equationArea).innerHTML = x + " + 0 + 0 + " + i + " =";
+            } else if (x !== "" && y === "" && z !== "" && i === "") {
+                //if both y and i equaled nothing
+                document.getElementById(equationArea).innerHTML = x + " + 0 + " + z + " + 0 =";
             } else {
-               document.getElementById(equationArea).innerHTML = x + " + " + y + " + " + z + " = ";
+               document.getElementById(equationArea).innerHTML = x + " + " + y + " + " + z + " + " + i + " =";
             }
             
             document.getElementById(equationArea).style.backgroundColor = "lightgreen";
@@ -108,7 +121,7 @@ window.onload = function () {
 
             cssEdit.multiplyBy4css(id, equationArea, resultArea);
             return document.getElementById(resultArea).innerHTML = res;
-        }
+        },
     };
     $("#calSquare").click(function () {
         calculator.multiplyBy4("sq-side", "form", "res");
@@ -131,5 +144,5 @@ window.onload = function () {
         calculator.add3Itmescss(x, y, z, "form2", "res2");
         
         return $("#res2").html(result);
-    })
+    });
 }
