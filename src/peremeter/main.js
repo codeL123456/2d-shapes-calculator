@@ -27,8 +27,7 @@ window.onload = function () {
             document.getElementById(equationArea).style.backgroundColor = "lightgreen";
             document.getElementById(resultArea).style.backgroundColor = "yellow";
         },
-        add3Itmescss(x, y, z, i, equationArea, resultArea){
-            i = i || "";
+        add3Itmescss(x, y, z, equationArea, resultArea){
 
             if (x === "" && y === "" && z === "") {
                 //if three of them equals nothing
@@ -56,7 +55,12 @@ window.onload = function () {
                 //if somthing else happend
                document.getElementById(equationArea).innerHTML = x + " + " + y + " + " + z + " = ";
             }
-
+            
+            document.getElementById(equationArea).style.backgroundColor = "lightgreen";
+            document.getElementById(resultArea).style.backgroundColor = "yellow";
+        },
+        add4items(x, y, z, i, equationArea, resultArea){
+            
             //If the i is present.
             if (x === "" && y === "" && z === "" && i === "") {
                 //if all of them equaled nothing
@@ -98,7 +102,7 @@ window.onload = function () {
             
             document.getElementById(equationArea).style.backgroundColor = "lightgreen";
             document.getElementById(resultArea).style.backgroundColor = "yellow";
-        },
+        }
     };
     var calculator = {
         multiplyBy2AndAdd(x, y, equationArea, resultArea){
@@ -141,7 +145,7 @@ window.onload = function () {
         $("#tri-side2").val("");
         $("#tri-base").val("");
 
-        calculator.add3Itmescss(x, y, z, "form2", "res2");
+        cssEdit.add3Itmescss(x, y, z, "form2", "res2");
         
         return $("#res2").html(result);
     });
