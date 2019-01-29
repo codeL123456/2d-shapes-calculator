@@ -149,4 +149,24 @@ window.onload = function () {
         
         return $("#res2").html(result);
     });
+
+    $("#calCir").click(function () {
+        var radius = $("#rad").val();
+        var result = 2 * Math.PI * radius;
+        var resultArea = $("#res3");
+        var formulaArea = $("#form3");
+
+        $("#rad").val("");
+
+        if (radius === "") {
+            formulaArea.html("2 &pi; 0");
+        } else {
+            formulaArea.html("2 &pi; " + radius);
+        }
+
+        resultArea.css("backgroundColor", "yellow");
+        formulaArea.css("backgroundColor", "lightgreen");
+
+        return resultArea.html(result)
+    });
 }
