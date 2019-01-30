@@ -3,30 +3,41 @@ window.onload = function () {
     var cssEdit = {
         multiplyBy4css(x, equationArea, resultArea){
             if (x === "") {
+                //if x equaled nothing
                 alert("please provide a number!");
                 document.getElementById(equationArea).innerHTML = "";
              } else {
+                 //if it was filled
                 document.getElementById(equationArea).innerHTML = x + " x 4 = ";
             }
+            //highlighting the equation
             document.getElementById(equationArea).style.backgroundColor = "lightgreen";
+            //highlighting the answer
             document.getElementById(resultArea).style.backgroundColor = "yellow";
         },
 
         multiplyBy2AndAddcss(x, y, equationArea, resultArea){
             if (x === "" && y === "") {
+                //if nothing was thier
                 alert("please provide a number!");
                 document.getElementById(equationArea).innerHTML = "";
             } else if (x === "" && y !== "") {
+                //if only x equaled nothing
                 document.getElementById(equationArea). innerHTML = "2(0 + " + y + ") = ";
             } else if (x !== "" && y === "") {
+                //if only y equaled nothing
                 document.getElementById(equationArea). innerHTML = "2( " + x + " + 0) = ";
             } else {
+                //if every =thing was filled
                 document.getElementById(equationArea).innerHTML = "2( " + x + " + " + y + ") =";
             }
 
+            //highliting the equation
             document.getElementById(equationArea).style.backgroundColor = "lightgreen";
+            //highlighing the answer
             document.getElementById(resultArea).style.backgroundColor = "yellow";
         },
+
         add3Itmescss(x, y, z, equationArea, resultArea){
 
             if (x === "" && y === "" && z === "") {
@@ -55,13 +66,13 @@ window.onload = function () {
                 //if somthing else happend
                document.getElementById(equationArea).innerHTML = x + " + " + y + " + " + z + " = ";
             }
-            
+            //highlighting the equation
             document.getElementById(equationArea).style.backgroundColor = "lightgreen";
+            //highlighting the answer
             document.getElementById(resultArea).style.backgroundColor = "yellow";
         },
+
         add4items(x, y, z, i, equationArea, resultArea){
-            
-            //If the i is present.
             if (x === "" && y === "" && z === "" && i === "") {
                 //if all of them equaled nothing
                 alert("please provide a number!");
@@ -100,29 +111,43 @@ window.onload = function () {
                document.getElementById(equationArea).innerHTML = x + " + " + y + " + " + z + " + " + i + " =";
             }
             
+            //highlighting the equation
             document.getElementById(equationArea).style.backgroundColor = "lightgreen";
+            //highlighting the answer
             document.getElementById(resultArea).style.backgroundColor = "yellow";
         }
     };
     var calculator = {
         multiplyBy2AndAdd(x, y, equationArea, resultArea){
+            //getting the values
             let id = document.getElementById(x).value;
             let id1 = document.getElementById(y).value;
+
+            //calculating the result
             let result = 2 * (+id + +id1);
 
+            //sitting the values to 0
             document.getElementById(x).value = "";
             document.getElementById(y).value = "";
 
+            //editing the css
             cssEdit.multiplyBy2AndAddcss(id, id1, equationArea, resultArea);
+            
+            //displaying the result
             return document.getElementById(resultArea).innerHTML = result;
         },
 
         multiplyBy4(x, equationArea, resultArea){
+            //gitting the values
             let id  = document.getElementById(x).value;
+
+            //calculating the results
             let res = id * 4;
 
+            //sitting the inputs to 0
             document.getElementById(x).value = "";
 
+            //
             cssEdit.multiplyBy4css(id, equationArea, resultArea);
             return document.getElementById(resultArea).innerHTML = res;
         },
