@@ -169,4 +169,24 @@ window.onload = function () {
 
         return resultArea.html(result)
     });
+    $("#calPara").click(function () {
+        calculator.multiplyBy2AndAdd("para-base", "para-height", "form4", "res4");
+    });
+    $("#calRom").click(function () {
+        var side1 = $("#side1").val();
+        var side2 = $("#side2").val();
+        var side3 = $("#side3").val();
+        var side4 = $("#side4").val();
+        
+        var result = +side1 + +side2 + +side3 + +side4;
+
+        $("#side1").val("");
+        $("#side2").val("");
+        $("#side3").val("");
+        $("#side4").val("");  
+        
+        cssEdit.add4items(side1, side2, side3, side4, "form5", "res5");
+
+        return $("#res5").html(result);
+    })
 }
