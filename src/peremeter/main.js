@@ -147,8 +147,9 @@ window.onload = function () {
             //sitting the inputs to 0
             document.getElementById(x).value = "";
 
-            //
+            //editing the css
             cssEdit.multiplyBy4css(id, equationArea, resultArea);
+            //displaying the results.
             return document.getElementById(resultArea).innerHTML = res;
         },
     };
@@ -161,28 +162,41 @@ window.onload = function () {
     });
 
     $("#calTri").click(function () {
+        //gitting the values
         var x = $("#tri-side1").val();
         var y = $("#tri-side2").val();
         var z = $("#tri-base").val();
+
+        //calculating the results
         var result = +x + +y + +z;
 
+        //sitting the values to zero
         $("#tri-side1").val("");
         $("#tri-side2").val("");
         $("#tri-base").val("");
 
+        //editing the css
         cssEdit.add3Itmescss(x, y, z, "form2", "res2");
         
+        //dsiplaying the results
         return $("#res2").html(result);
     });
 
     $("#calCir").click(function () {
+        //gitting the values
         var radius = $("#rad").val();
+
+        //calculating the results
         var result = 2 * Math.PI * radius;
+
+        //gitting the id of the values of the areas where we will display the rsult and the equation
         var resultArea = $("#res3");
         var formulaArea = $("#form3");
 
+        //sitting the inputs to 0
         $("#rad").val("");
 
+        //editing the css
         if (radius === "") {
             formulaArea.html("2 &pi; 0");
         } else {
@@ -192,26 +206,32 @@ window.onload = function () {
         resultArea.css("backgroundColor", "yellow");
         formulaArea.css("backgroundColor", "lightgreen");
 
+        //displaying the results
         return resultArea.html(result)
     });
     $("#calPara").click(function () {
         calculator.multiplyBy2AndAdd("para-base", "para-height", "form4", "res4");
     });
     $("#calRom").click(function () {
+        //gitting the values
         var side1 = $("#side1").val();
         var side2 = $("#side2").val();
         var side3 = $("#side3").val();
         var side4 = $("#side4").val();
         
+        //calulating the result
         var result = +side1 + +side2 + +side3 + +side4;
 
+        //sitting the inputs to 0
         $("#side1").val("");
         $("#side2").val("");
         $("#side3").val("");
         $("#side4").val("");  
         
+        //editting the css
         cssEdit.add4items(side1, side2, side3, side4, "form5", "res5");
 
+        //displaying the vavlues
         return $("#res5").html(result);
     })
 }
