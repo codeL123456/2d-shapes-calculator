@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
     <title>volume</title>
 </head>
 <body>
-    
+    <h1>volumes of 3d shapes</h1>
+    <nav class="container description">
+        <ul>
+            <li><a href="#cube">cube</a></li>
+            <li><a href="#rectangularPrizm">rectangular prism</a></li>
+            <li><a href="#triangularPrizm">triangular prizm</a></li>
+            <li><a href="#squarePriramid">square piramid</a></li>
+            <li><a href="#priamid">piramid</a></li>
+            <li><a href="#cone">cone</a></li>
+            <li><a href="#sphear">sphear</a></li>
+        </ul>
+    </nav>
+
+    <div class="container description" id="cube">
+        <h2>cube</h2>
+        <p class="lead">A <mark>cube</mark> is a 3 dimintional shape that has 6 faces and all of them are equal in thier area and peremeter</p>
+        <img src="img/cube.jpg" width="200px"/>
+        <p>this is a cube</p>
+        <hr>
+        <h3>formulas</h3>
+        <p class="lead">
+            <span class="res">volume of a cube </span>
+            <span class="form">= edge <sup>3</sup></span>
+        </p>
+        <hr>
+        <h4>The results of your calculation: </h4>
+        <p class="lead">
+            <span id="form"></span>
+            <span id="res"></span>
+        </p>
+        <input type="number" placeholder="edge" id="cube-edge"><br>
+        <button class="btn btn-outline-success" id="calCube">calculate</button>
+    </div>
 </body>
 </html>
