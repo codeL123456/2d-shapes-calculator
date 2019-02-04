@@ -2,7 +2,7 @@ window.onload = function () {
     var cssEdit = {
         multiplyBy4css(x, equationArea, resultArea){
             if (x === "") {
-            sdfsdfsdf    //if x equaled nothing
+                //if x equaled nothing
                 alert("please provide a number!");
                 document.getElementById(equationArea).innerHTML = "";
              } else {
@@ -143,5 +143,6 @@ window.onload = function () {
     });
     $("#calRectPri").click(function () {
         //gitting the val
+        var l = $("#rect-length").val();
     })
 }
