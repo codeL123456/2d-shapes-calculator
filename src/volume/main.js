@@ -36,7 +36,7 @@ window.onload = function () {
     };
     $("#calCube").click(function () {
         //gitting the values
-        var a = valueAdder("cube-edge");
+        var a = $("#cube-edge").val();
         //gitting the result and formula a areas
         var resultArea = $("#res");
         var equationArea = $("#form");
@@ -79,4 +79,7 @@ window.onload = function () {
         //displaying the result
         return $("#res1").html(result);
     });
+    $("#calSqrPir").click(function () {
+        
+    })
 }
