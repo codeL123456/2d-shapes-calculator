@@ -36,7 +36,7 @@ window.onload = function () {
     };
     $("#calCube").click(function () {
         //gitting the values
-        var a = $("#cube-edge");
+        var a = $("#cube-edge").val();
         //gitting the result and formula a areas
         var resultArea = $("#res");
         var equationArea = $("#form");
